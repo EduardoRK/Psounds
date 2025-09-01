@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Columna de botones con ScrollView -->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSeleccionar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar Audio" />
+
+            <Button
+                android:id="@+id/btnReproducir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reproducir"
+                android:layout_marginTop="16dp"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/btnDetener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detener"
+                android:layout_marginTop="16dp"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/btnToggleWaveform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar/Ocultar Ondas"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnToggleSpectrogram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar/Ocultar Espectrograma"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnClasificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clasificar Sonido"
+                android:layout_marginTop="16dp"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/btnGenerarEspectrograma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generar Espectrograma"
+                android:layout_marginTop="16dp"
+                android:enabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Contenedor de vistas -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <com.example.psounds_v4.WaveformView
+            android:id="@+id/waveformView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <com.example.psounds_v4.SpectrogramView
+            android:id="@+id/spectrogramView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

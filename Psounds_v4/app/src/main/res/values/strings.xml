@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Psounds_v4</string>
+
+    <string name="seleccionar_audio">Seleccionar Audio</string>
+    <string name="reproducir">Reproducir</string>
+    <string name="detener">Detener</string>
+    <string name="mostrar_ocultar_ondas">Mostrar/Ocultar Ondas</string>
+    <string name="mostrar_ocultar_espectrograma">Mostrar/Ocultar Espectrograma</string>
+
+</resources>
